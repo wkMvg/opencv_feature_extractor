@@ -1,3 +1,4 @@
+//author wk
 #include<iostream>
 #include<vector>
 #include <opencv2/core.hpp>
@@ -53,7 +54,7 @@ int main()
 
 
 	clock_t start = time(NULL);
-	// ����ڵ�ʹν��ڵ�ƥ��
+	// 最近邻点和次近邻点匹配
 	BFMatcher matcher2(NORM_HAMMING);
 	Ptr<FlannBasedMatcher> matcher3 = makePtr<FlannBasedMatcher>(makePtr<flann::LshIndexParams>(12, 20, 1));
 	vector<vector<DMatch>> matches_nn;
@@ -95,7 +96,7 @@ int main()
 
 
 	clock_t start = time(NULL);
-	// ����ڵ�ʹν��ڵ�ƥ��
+	// 最近邻点和次近邻点匹配
 	Ptr<DescriptorMatcher> matrcher2 = DescriptorMatcher::create("BruteForce-Hamming");
 	vector<vector<DMatch>> matches_nn;
 	vector<DMatch> goodMatches_nn;
@@ -128,7 +129,7 @@ int main()
 
 
 	clock_t start = time(NULL);
-	// ����ڵ�ʹν��ڵ�ƥ��
+	// 最近邻点和次近邻点匹配
 	Ptr<DescriptorMatcher> matrcher2 = DescriptorMatcher::create("FlannBased");
 	vector<vector<DMatch>> matches_nn;
 	vector<DMatch> goodMatches_nn;
@@ -162,7 +163,7 @@ int main()
 
 
 	clock_t start = time(NULL);
-	// ����ڵ�ʹν��ڵ�ƥ��
+	// 最近邻点和次近邻点匹配
 	Ptr<DescriptorMatcher> matrcher2 = DescriptorMatcher::create("BruteForce-Hamming");
 	vector<vector<DMatch>> matches_nn;
 	vector<DMatch> goodMatches_nn;
@@ -220,7 +221,7 @@ int main()
 	surfDet->compute(img2, keypoints2, descrip2);
 	clock_t end = time(NULL);
 	cout << "detect cost time is: " << end - start << endl;
-//	// ����ڵ�ʹν��ڵ�ƥ��
+//	// 最近邻点和次近邻点匹配
 	Ptr<DescriptorMatcher> matrcher2 = DescriptorMatcher::create("BruteForce-Hamming");
 	vector<vector<DMatch>> matches_nn;
 	vector<DMatch> goodMatches_nn;
@@ -254,7 +255,7 @@ std:cout << "descriptors type is" << descrip2.type() << endl;
 
 
 	clock_t start = time(NULL);
-	// ����ڵ�ʹν��ڵ�ƥ��
+	// 最近邻点和次近邻点匹配
 	Ptr<DescriptorMatcher> matrcher2 = DescriptorMatcher::create("FlannBased");
 	vector<vector<DMatch>> matches_nn;
 	vector<DMatch> goodMatches_nn;
