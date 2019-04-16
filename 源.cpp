@@ -28,8 +28,6 @@ using namespace cv::xfeatures2d;
 #define orb
 int main()
 {
-	int a;
-	a = 1 << 18;
 	Mat img1 = imread("F:\\data\\111\\DSC00003.JPG");
 	Mat img2 = imread("F:\\data\\111\\DSC00266.JPG");
 
